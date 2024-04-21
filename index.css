@@ -1,0 +1,23 @@
+.containerRow {
+    width: 600px;
+    height: 200px;
+    border: 2px black solid;
+    display: flex;
+}
+.container {
+    background-color: aqua;
+    width: 200px;
+    height: 200px;
+    border: 2px black solid;
+}
+#gridContainer {
+    width: 600px;
+    height: 600px;
+}
+body {
+    display: grid;
+    justify-content: center;
+}
+header {
+    text-align: center;
+}
