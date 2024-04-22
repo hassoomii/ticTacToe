@@ -1,8 +1,11 @@
-function user(){
-  
+function User(){
+  var userTurn = true;
+  return{
+    userTurn
+  };
 };
 
-function gameBoard(){
+function GameBoard(){
   var userOneMessage = "User one's turn";
   var userTwoMessage = "User two's turn";
   var userOneWinMessage = "User one wins";
@@ -25,9 +28,23 @@ function gameBoard(){
 
         containerRow.appendChild(container);
 
+        container.addEventListener('click', () => {
+          if (user.userTurn === true){
+            container.textContent = 'X';
+          } else{
+            container.textContent = 'O';
+          };
+          user.userTurn = !user.userTurn;
+
+        });
       };
     };
   };
   displayBoard();
+  return{
+    userOneMessage, userTwoMessage, userOneWinMessage, userTwoWinMessage
+  };
 };
-gameBoard();
+
+const gameBoard = GameBoard();
+const user = User();

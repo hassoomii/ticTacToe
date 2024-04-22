@@ -5,10 +5,15 @@
     display: flex;
 }
 .container {
+    display: grid;
     background-color: aqua;
     width: 200px;
     height: 200px;
     border: 2px black solid;
+    font-size: 700%;
+    font-family: Arial;
+    text-align: center;
+    align-items: center;
 }
 #gridContainer {
     width: 600px;
