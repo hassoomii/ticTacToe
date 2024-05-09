@@ -1,16 +1,15 @@
 function User(){
-  var userTurn = true;
+  let userTurn = true;
   return{
     userTurn
   };
 };
 
 function GameBoard(){
-  var userOneMessage = "User one's turn";
-  var userTwoMessage = "User two's turn";
-  var userOneWinMessage = "User one wins";
-  var userTwoWinMessage = "User two wins";
-
+  let userOneMessage = "User one's turn";
+  let userTwoMessage = "User two's turn";
+  let userOneWinMessage = "User one wins";
+  let userTwoWinMessage = "User two wins";
 
   function displayBoard(){
     for (let i = 0; i < 3; i++){
@@ -29,13 +28,16 @@ function GameBoard(){
         containerRow.appendChild(container);
 
         container.addEventListener('click', () => {
-          if (user.userTurn === true){
-            container.textContent = 'X';
-          } else{
-            container.textContent = 'O';
-          };
-          user.userTurn = !user.userTurn;
 
+          if (container.textContent === '') {
+            if (user.userTurn === true){
+              container.textContent = 'X';
+            } else{
+              container.textContent = 'O';
+            };
+            user.userTurn = !user.userTurn;
+            
+          }
         });
       };
     };
